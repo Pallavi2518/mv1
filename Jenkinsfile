@@ -24,7 +24,7 @@ pipeline {
 
         stage('Run Container') {
             steps {
-                sh 'docker run -d -p 8080:8080 --name javaapp maven1'
+                sh 'docker run -d -p 8080:8080 maven1'
             }
         }
     }
@@ -33,7 +33,6 @@ pipeline {
         success {
             echo 'Pipeline completed successfully'
         }
-
         failure {
             echo 'Pipeline failed'
         }

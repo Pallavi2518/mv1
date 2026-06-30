@@ -5,7 +5,8 @@ pipeline {
 
         stage('Clone') {
             steps {
-                echo 'Fetching project files'
+                git branch: 'main',
+                url: 'https://github.com/Pallavi2518/mv1.git'
             }
         }
 
